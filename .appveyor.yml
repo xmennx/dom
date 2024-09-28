@@ -10,13 +10,12 @@ branches:
 cache: node_modules  # кеширование
 
 install:
-  - yarn  # команда установки зависимостей
+  - npm install
 
 build: off  # отключаем встроенную в appveyor систему сборки
 
 build_script:
-  - yarn build   # команда сборки
-  - jest --passWithNoTests
+  - npm test -- --passWithNoTests
 
 test_script:
   - yarn lint && yarn test  # скрипт тестирования
