@@ -1,6 +1,4 @@
-// TODO: write code here
-import GameController from './GameController';
+import Character from "./init";
 
-const gameController = new GameController(document.querySelector('.field'));
-
-gameController.nextTurn();
+const Game = new Character(document.querySelector(".grid-container"));
+Game.getRandomPosition();
