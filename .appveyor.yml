@@ -20,6 +20,10 @@ build_script:
 test_script:
   - yarn lint && yarn test  # скрипт тестирования
 
+environment:
+  GITHUB_TOKEN:
+    secure: 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
+
 deploy_script:  # скрипт развёртывания
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
